@@ -115,11 +115,13 @@ func projectDetail(w http.ResponseWriter, r *http.Request) {
 
 	for index, data := range Projects{
 		if index == id {
+				newStartDate, _ := time.Parse("2006-01-02", data.StartDate)
+				newEndDate, _ := time.Parse("2006-01-02", data.EndDate)
 				ProjectDetail = dataProject{
 					Id: id,
 					ProjectName: data.ProjectName,
-					StartDate: data.StartDate,
-					EndDate: data.EndDate,
+					StartDate: newStartDate.Format("02 Jan 2006"),
+					EndDate: newEndDate.Format("02 Jan 2006"),
 					Description: data.Description,
 					Technologies: data.Technologies,
 					Duration: data.Duration,
