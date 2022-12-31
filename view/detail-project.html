@@ -1,0 +1,94 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>{{.Title}}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../public/asset/css/navbar.css">
+        <link rel="stylesheet" href="../public/asset/css/detail-project.css">
+    </head>
+
+    <body >
+        <!-- Header -->
+        <header>
+            <!-- Navbar -->
+            <nav>
+                <section class="item-left">
+                    <!-- Logo -->
+                    <img src="../public/asset/image/logo.png" alt="logoBrand" />
+                    <!-- List Menu -->
+                    <ul>
+                        <li>
+                            <a class="active" href="/home">Home</a>
+                        </li>
+                        <li>
+                            <a class="non-active" href="/myProject"> My Project </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Contact Me -->
+                <section class="item-right">
+                    <a href="/contact"> Contact Me</a>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <section class="content" id="content">
+            <h1 class="title">{{.ProjectDetail.ProjectName}}</h1>
+            <div class="content-group">
+                <div class="content-up">
+                    <div class="content-left">
+                        <img src="https://images.unsplash.com/photo-1670672950186-06319ae47429?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="Project Image">
+                    </div>
+    
+                    <div class="content-right">
+                        <div class="duration">
+                            <h1>Duration</h1>
+                            <div>
+                                <div class="calendar">
+                                    <img src="https://img.icons8.com/ios-glyphs/30/1A1A1A/calendar.png" alt="calendar">
+                                    <p>{{.ProjectDetail.StartDate}} - {{.ProjectDetail.EndDate}}</p>
+                                </div>
+        
+                                <div class="timeSpan">
+                                    <img src="https://img.icons8.com/ios-glyphs/30/1A1A1A/time-span.png" alt="time span">
+                                    <p>{{.ProjectDetail.Duration}}</p>
+                                </div>
+                            </div>
+                            
+                            
+                        </div>
+    
+                        <div class="technologies">
+                            <h1>Technologies</h1>
+                            <div>
+                                <div class="tech">
+                                {{range $index, $data := .ProjectDetail.Technologies}}
+                                    <img src="/public/asset/icon/icons-{{$data}}.svg" alt="">
+                                    {{if eq $data "nodeJs"}}
+                                        <p>Node Js</p>
+                                    {{else if eq $data "reactJs"}}
+                                        <p>React Js</p>
+                                    {{else if eq $data "nextJs"}}
+                                        <p>Next Js</p>
+                                    {{else}}
+                                        <p>TypeScript</p>
+                                    {{end}}
+                                {{end}}
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="content-down">
+                    <p>{{.ProjectDetail.Description}}</p>
+                </div>
+            </div>
+            
+            
+        </section>
+        
+    </body>
+</html>

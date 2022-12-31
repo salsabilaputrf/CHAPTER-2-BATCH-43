@@ -1,0 +1,120 @@
+* {
+    margin:0;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+/* Content */
+.content {
+    background-color: #e3e7eb;
+    display: flex;
+}
+
+.content > div {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 1200px;
+    margin: 100px auto;
+    box-shadow: 0px 5px 22px rgb(75, 72, 72);
+}
+
+.content-left {
+    flex: 50%;
+    margin: 120px 70px;
+}
+
+.content-right {
+    flex: 50%;
+    margin-right: 40px;
+}
+
+.text-area > h1 {
+    color: black;
+    font-weight: bold;
+    font-size:xx-large;
+}
+
+.text-area > p {
+    text-align: justify;
+    margin-top: 20px;
+}
+
+.contact-download {
+    display: inline-flex;
+    margin-top: 40px;
+    gap: 25px;
+}
+
+.contact-download > a {
+    text-decoration: none; 
+    padding: 8px 20px; 
+    background-color: #111727; 
+    color: white; 
+    border-radius: 180px; 
+}
+
+.contact-download > a:hover {
+    background-color: orangered;
+}
+
+.contact-download > p .logo-download{
+    width: 20px;
+}
+
+.sosmed {
+    width: 100%; 
+    justify-content: left; 
+    display:flex; 
+    margin-top: 50px; 
+    gap: 30px;
+}
+
+.sosmed a {
+    background-color: black; 
+    color:white; 
+    text-decoration:none; 
+    padding:8px; 
+    border-radius: 360px; 
+    display: inline-flex; 
+}
+
+.sosmed a:hover {
+    background-color: orangered;
+}
+
+.content-right .profile-card {
+    width: 400px; 
+    height: 600px;
+    object-fit: fill;
+    border: 1px solid black; 
+    margin: 30px auto; 
+    box-shadow: 0px 2px 20px #968f8f; 
+    border-radius: 15px; 
+    border: none; 
+    overflow: hidden; 
+    background-color: #f8f5f5; 
+}
+
+.profile-card img {
+    width: 100%;
+}
+
+.profile-card div {
+    margin: 20px;
+}
+
+.profile-card div h2 {
+    text-align: center; 
+    margin: 0; 
+    font-weight: 1000;
+}
+
+.profile-card div p {
+    color: #272626; 
+    margin: 0; 
+    text-align:center; 
+    font-size: 20px; 
+    font-weight: 400;
+}

@@ -1,0 +1,267 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Form*/
+.content { 
+    margin: auto;   
+}
+
+.content-up {
+    background-color: #e3e7eb;
+    margin: 0;
+}
+
+.content h1{
+    text-align: center;
+    padding: 30px;
+    font-weight: 800;
+}
+
+form {
+    width: 450px;
+    margin: 0px auto;
+    padding-bottom: 70px;
+}
+
+.date {
+    display: flex;
+    gap: 33px;
+    flex: 50%;
+    margin-top: 0px;
+}
+
+div {
+    margin-top: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0px 2px 10px rgb(185, 179, 179);
+}
+
+#subject {
+    width: 370px;
+}
+
+label {
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+    
+}
+
+input[type="checkbox"] {
+    width: 25px;
+    height: 25px;
+    margin-right: 7px;
+}
+
+#tech {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    gap: 10px;
+}
+
+.cb-group1, .cb-group2 {
+    width: 100%;
+    display: inline-flex;
+    flex: 50%;
+    margin-top: 0px;
+    border: none;
+}
+
+#typeScript {
+    margin-left: 6px;
+}
+
+.cb {
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.cb > label {
+    color: #534c4c;
+    text-align: center;
+}
+
+.upload label {
+    font-weight: bold;
+}
+
+.upload_btn {
+    width: 472px;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+    border: none;
+    box-shadow: 0px 1px 10px -1px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+.upload_btn label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 100%;
+}
+
+.upload_btn label svg {
+    margin-right: 10px;
+}
+
+.upload_btn p {
+    background-color: rgb(167, 166, 166);
+    width: 100px;
+    padding: 8px 12px;
+    text-align: center;
+    border-radius: 8px;
+    color: rgb(212, 217, 224);
+    border: 1px solid rgb(203, 203, 203);
+}
+
+.upload_btn p:hover {
+    background-color: orangered;
+    color: white;
+    transition: 500ms;
+}
+
+.btn-submit {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.btn-submit button {
+    
+    background-color: #111727;
+    border: none;
+    color: white;
+    padding: 6px 25px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-size: 18px;
+}
+
+.btn-submit button:hover {
+    background-color: orangered;
+}
+
+.content-down {
+    background-color: #f8f8f8;
+    padding: 30px;
+    margin-top: 0;
+    justify-content: center;
+}
+
+.content-down > h1 {
+    margin: 0;
+}
+
+.project {
+    display:flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.project_item {
+    background-color: white;
+    border-radius: 15px;
+    display: grid;
+    width: 20%;
+    padding-top: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 5px 20px #c1c4c7;
+}
+
+
+.project_img {
+    width: 100%;
+    height: 300px;
+}
+
+#image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: 0;
+    object-fit: contain;
+}
+
+.title {
+    padding: 0px;
+    margin: 0px;
+    justify-items: left;
+}
+
+.title a {
+    text-decoration: none;
+    color: black;
+    text-align: left;
+    margin: 0px;
+    font-size:x-large;
+    font-weight: bold;
+}
+
+.duration {
+    color: #787a7b;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.desc {
+    color: #272929;
+}
+
+.technology > img {
+    width: 40px;
+}
+
+.btn-edit{
+    border: none;
+    padding: 5px 30px;
+    flex: 50%;
+    border-radius: 10px;
+    font-size:medium;
+    color: white;
+    background-color: #111727;
+}
+
+.btn-edit:hover {
+    background-color: orangered;
+}
+
+.btn-delete{
+    border: none;
+    flex: 50%;
+    border-radius: 10px;
+    font-size: medium;
+    color: white;
+    background-color: #111727;
+}
+
+.btn-delete:hover {
+    background-color: orangered;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+}

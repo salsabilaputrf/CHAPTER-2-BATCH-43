@@ -1,0 +1,173 @@
+*{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.content {
+    background-color: #e3e7eb;
+    padding-bottom: 100px;
+}
+
+.title {
+    text-align: center;
+    padding: 30px;
+    font-weight: 800;
+    font-size: xx-large;
+}
+
+
+
+.content-up {
+    margin: 0;
+    display: flex;
+    padding: 30px 300px;
+}
+
+.content-left {
+    flex: 60%;
+}
+
+.content-left > img {
+    width: 100%;
+    height: 400px;
+}
+
+.content-right {
+    flex: 40%;
+    padding-left: 50px;
+    display: block;
+}
+
+.duration {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 50px;
+}
+
+.duration > div {
+    display: block;
+    margin-top: 20px;
+}
+
+.calendar  {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.calendar > p {
+    padding: 10px 0px;
+    color: #5c5657;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.timeSpan {
+    display: flex;
+    gap: 20px;
+}
+
+.timeSpan > p {
+    padding: 10px 0px;
+    color: #5c5657;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.calendar > img {
+    width: 40px;
+}
+
+.timeSpan > img {
+    width: 40px;
+}
+
+.technologies {
+    display: block;
+}
+
+.technologies > div {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.nodeJs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 0px;   
+}
+
+.nodeJs > img {
+    width: 40px;
+}
+
+.nodeJs > p {
+    padding: 10px 0px;
+    color: #5c5657;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.reactJs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;   
+}
+
+.reactJs > img {
+    width: 40px;
+}
+
+.reactJs > p {
+    padding: 10px 0px;
+    color: #5c5657;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.nextJs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px; 
+    margin-right: 8px;  
+}
+
+.nextJs > img {
+    width: 40px;
+}
+
+.nextJs > p {
+    padding: 10px 0px;
+    color: #5c5657;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.typeScript {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 5px;   
+}
+
+.typeScript > img {
+    width: 40px;
+}
+
+.typeScript > p {
+    padding: 10px 0px;
+    color: #5c5657;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.content-down {
+    margin-top: 20px;
+    padding: 0px 300px;
+}
+
+.content-down > p {
+    text-align: justify;
+    font-size: large;
+}

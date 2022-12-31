@@ -1,0 +1,174 @@
+<!Doctype html>
+<html>
+    <head>
+        <title>{{.Title}}</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../public/asset/css/navbar.css">
+        <link rel="stylesheet" href="../public/asset/css/my-project.css">
+    </head>
+
+    <body >
+        <!-- Header -->
+        <header>
+            <!-- Navbar -->
+            <nav>
+                <section class="item-left">
+                    <!-- Logo -->
+                    <img src="../public/asset/image/logo.png" alt="logoBrand" />
+                    <!-- List Menu -->
+                    <ul>
+                        <li>
+                            <a class="active" href="/home">Home</a>
+                        </li>
+                        <li>
+                            <a class="non-active" href="/myProject"> My Project </a>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Contact Me -->
+                <section class="item-right">
+                    <a href="/contact"> Contact Me</a>
+                </section>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <section class="content">
+
+            <!-- Content Up -->
+            <div class="content-up">
+                <h1>ADD MY PROJECT</h1>
+                <!-- ini adalah form input -->
+                <form action="/myProject" method="POST">
+                    <div>
+                        <label for="project_name">Project Name</label>
+                        <input type="text" id="project_name" name="projectName"/>
+                    </div>
+
+                    <div class="date">
+                        <div>
+                            <label for="start_date">Start Date</label>
+                            <input type="date" id="start_date" name="startDate"/>
+                        </div>
+                        
+                        <div>
+                            <label for="end_date">End Date</label>
+                            <input type="date" id="end_date" name="endDate"/>
+                        </div>
+                    </div>
+                    
+
+                    <div>
+                        <label for="desc">Description</label>
+                        <textarea id="desc" rows="7"  name="desc"></textarea>
+                    </div>
+
+                    <div class="tech">
+                        <label for="tech">Technologies</label>
+                        <div id="tech">
+                                <div class="cb">
+                                    <input type="checkbox" name="technologi" value="nodeJs" id="nodeJs" />
+                                    <label for="nodeJs">Node Js</label>
+                                </div>
+                                <div class="cb">
+                                    <input type="checkbox" name="technologi" value="reactJs" id="reactJs" />
+                                    <label for="reactJs">React Js</label>
+                                </div>
+                                <div class="cb">
+                                    <input type="checkbox" name="technologi" value="nextJs" id="nextJs" />
+                                    <label for="nextJs">Next Js</label>
+                                </div>
+                                
+                                <div class="cb">
+                                    <input type="checkbox" name="technologi" value="typeScript" id="typeScript" />
+                                    <label for="typeScript">TypeScript</label>
+                                </div>
+                            
+                        </div>
+                        
+                    </div>
+
+                    <div class="upload">
+                        <label for="upload_img">Upload Image</label>
+                        <div class="upload_btn">
+                            <label for="upload_img">
+                                <p>Choose</p>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-paperclip" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M15 7l-6.5 6.5a1.5 1.5 0 0 0 3 3l6.5 -6.5a3 3 0 0 0 -6 -6l-6.5 6.5a4.5 4.5 0 0 0 9 9l6.5 -6.5"></path>
+                                 </svg>
+                            </label>
+                            <input type="file" id="upload_img" name="upload-img" accept="image/*" hidden>
+                        </div>
+                    </div>
+
+                    <div class="btn-submit">
+                        <button type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Content Down -->
+            <div class="content-down">
+                <h1>MY PROJECT</h1>
+                <div class="project" id="project">
+
+                    <!-- Dynamic Content -->
+                    {{range $index, $data := .Projects}}
+                    <div class="project_item">
+                        <div class="project_img">
+                            <img src="/public/asset/image/dummy.png" alt="Avatar profil" id="image"/> 
+                        </div>
+            
+                        <div class="project_content">
+                            <p class="title">
+                                <a href="/projectDetail/{{$index}}" target="_blank">{{$data.ProjectName}}</a>
+                            </p>
+                            <p class="duration">Durasi: {{$data.Duration}}</p>
+                            <p class="desc">{{$data.Description}}</p>
+                            <div class="technology">
+                            {{range $index, $data := $data.Technologies}}
+                                <img src="/public/asset/icon/icons-{{$data}}.svg" alt="">
+                            {{end}}
+                            </div>
+                            <div class="btn-group">
+                                <a class="btn-edit">edit</a>
+                                <a class="btn-delete" href="/deleteProject/{{$index}}">delete</a>
+                            </div>
+                        </div>                  
+                    </div>
+                    {{end}}
+
+                    <!--
+                    <div class="project_item">
+                        <div class="project_img">
+                            <img src="/public/asset/image/dummy.png" alt="Avatar profil" id="image"/> 
+                        </div>
+            
+                        <div class="project_content">
+                            <p class="title">
+                                <a href="/myProject/1" target="_blank">Dumbways Mobile Apps</a>
+                            </p>
+                            <p class="duration">Durasi: 1 bulan</p>
+                            <p class="desc">Aplikasi mobile dari dumbways</p>
+                            <div class="technology">
+                                <img src="../public/asset/icon/icons-node-js.svg" alt="">
+                                <img src="../public/asset/icon/icons-react.svg" alt="">
+                                <img src="../public/asset/icon/icons-next.js.svg" alt="">
+                                <img src="../public/asset/icon/icons-typescript.svg" alt="">
+                            </div>
+                            <div class="btn-group">
+                                <button class="btn-edit">edit</button>
+                                <button class="btn-delete">delete</button>
+                            </div>
+                        </div>                  
+                    </div> -->
+                </div>
+                
+
+            </div>
+        </section>
+        <script src="../public/asset/js/my-project.js"></script>
+    </body>
+</html>
